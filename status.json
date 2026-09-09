@@ -1,0 +1,109 @@
+{
+  "lastUpdate": "2026-09-09T05:25:00Z",
+  "phase": "Fase 1: Core mínimo",
+  "phaseObjective": "Definir entidades (marcas y proyectos), persistencia local y recuperación al reabrir la app en macOS.",
+  "activeTask": {
+    "id": "TASK_001",
+    "title": "Marcas y proyectos con persistencia local",
+    "status": "Implementado y probado automáticamente; pendiente prueba manual de UI."
+  },
+  "workInProgress": [
+    "Diseño y despliegue de la presentación pública estilo Apple MacBook Pro en GitHub Pages."
+  ],
+  "checks": {
+    "automatic": [
+      {
+        "description": "Compilación del esquema Abrxos para macOS (arm64)",
+        "result": "Exitoso con xcodebuild (2026-09-09)",
+        "timestamp": "2026-09-09T00:30:20Z"
+      },
+      {
+        "description": "Pruebas unitarias de persistencia (PersistenceTests)",
+        "result": "Exitoso (3/3 pruebas superadas: validación de nombres, persistencia con nueva instancia y manejo de datos corruptos)",
+        "timestamp": "2026-09-09T00:30:45Z"
+      },
+      {
+        "description": "Pruebas de interfaz y rendimiento (AbrxosUITests)",
+        "result": "Exitoso (testExample y testLaunchPerformance superados)",
+        "timestamp": "2026-09-09T00:30:45Z"
+      },
+      {
+        "description": "Validación de JSON y build de GitHub Pages",
+        "result": "Exitoso (status: built en GitHub Pages)",
+        "timestamp": "2026-09-09T05:20:28Z"
+      }
+    ],
+    "manual": [
+      {
+        "description": "Crear marca y proyecto, cerrar la app completamente y reabrirla para comprobar recuperación",
+        "result": "Pendiente de confirmación del usuario en Xcode / My Mac",
+        "timestamp": null
+      },
+      {
+        "description": "Revisión visual de la presentación pública desplegada en GitHub Pages",
+        "result": "Desplegada y disponible públicamente en https://lordjeferies.github.io/Abrxos/",
+        "timestamp": "2026-09-09T05:25:00Z"
+      }
+    ]
+  },
+  "nextSteps": [
+    "Confirmar la ejecución interactiva en My Mac y la persistencia visual al reabrir.",
+    "Revisar la presentación pública estilo Apple en https://lordjeferies.github.io/Abrxos/",
+    "Avanzar hacia la Fase 2 (Sol Blanco / Sol Negro / Eclipse con plantillas)."
+  ],
+  "blockers": [],
+  "roadmapMilestones": [
+    {
+      "phase": "Fase 0",
+      "title": "Entorno, repositorio, documentación y primer arranque",
+      "status": "Completado (Hello world visible)"
+    },
+    {
+      "phase": "Fase 1",
+      "title": "Core mínimo: marcas, proyectos y persistencia local",
+      "status": "En curso (Implementado y testeado, pendiente prueba manual)"
+    },
+    {
+      "phase": "Fase 2",
+      "title": "Eclipse/Yod: propuestas y plantillas con Gemini opcional",
+      "status": "Pendiente"
+    },
+    {
+      "phase": "Fase 3",
+      "title": "Assets: registro, carpetas e importación local",
+      "status": "Pendiente"
+    },
+    {
+      "phase": "Fase 4+",
+      "title": "Multimedia, X-Rolls, Timeline y Edición Avanzada",
+      "status": "Diseño / Futuro"
+    }
+  ],
+  "history": [
+    {
+      "date": "2026-09-09",
+      "event": "Rediseño completo de la web a estilo Apple MacBook Pro con todos los puntos del Resumen Maestro integrados",
+      "evidence": "Estructura Bento Grid, tipografía SF Pro, subnav sticky, maquetas conceptuales y despliegue en GitHub Pages."
+    },
+    {
+      "date": "2026-09-09",
+      "event": "Publicación inicial del proyecto en GitHub (público) y despliegue en GitHub Pages",
+      "evidence": "Web en vivo en https://lordjeferies.github.io/Abrxos/"
+    },
+    {
+      "date": "2026-09-09",
+      "event": "Implementación de TASK_001 (Brand, Project, JSONPersistenceService, AppViewModel y Vistas SwiftUI)",
+      "evidence": "Pruebas unitarias PersistenceTests ejecutadas y superadas sin errores en xcodebuild."
+    },
+    {
+      "date": "2026-09-09",
+      "event": "Incorporación de VISION_MAESTRA.md y configuración de OpenCode con Gemini API",
+      "evidence": "Documentación registrada en el repositorio."
+    },
+    {
+      "date": "2026-09-09",
+      "event": "Primer arranque confirmado de la app SwiftUI ('Hello, world!')",
+      "evidence": "Commit 969b084 y captura aportada por el usuario."
+    }
+  ]
+}
