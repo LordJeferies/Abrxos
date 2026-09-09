@@ -9,3 +9,8 @@ Dependencias: repositorio local creado; Xcode seleccionado.
 5. Actualizar ESTADO_ACTUAL.md y esta tarea; revisar diff y guardar commit.
 Aceptación: documentos presentes; proyecto versionado; ventana mínima abre; no credenciales ni datos reales; fallos y pendientes documentados.
 Siguiente: TASK_001 Core mínimo — definir entidades y persistencia para un proyecto y su marca.
+
+## Avance confirmado
+Documentación instalada y primer commit documental realizado.
+Proyecto creado; compilación y arranque en My Mac confirmados.
+Se prepara el commit de la aplicación mínima y su documentación.

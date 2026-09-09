@@ -14,3 +14,17 @@ No hay funciones de producto ni conexión Gemini implementadas. No se han solici
 Tasks/TASK_000_BASE.md.
 ## Retomar
 Leer LEER_PRIMERO.md, revisar git status en el Mac y ejecutar solo el siguiente paso pendiente de la tarea.
+
+## Actualización: primer arranque confirmado
+Esta actualización sustituye los pendientes anteriores sobre copia,
+primer commit documental y creación/arranque de la aplicación.
+
+- Documentación instalada y registrada en el commit 844ce39.
+- Proyecto macOS creado dentro de App/.
+- Aplicación Abrxos compilada y ejecutada desde Xcode en My Mac.
+- Ventana inicial de SwiftUI visible: “Hello, world!”.
+- Evidencia: captura compartida por el usuario.
+- Pruebas automatizadas: todavía no ejecutadas.
+- Funciones de producto y conexión Gemini: todavía no implementadas.
+- Publicación del repositorio en GitHub: pendiente.
+- Siguiente entrega: Core mínimo de proyectos y marcas.
