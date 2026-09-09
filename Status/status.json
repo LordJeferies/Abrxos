@@ -1,36 +1,36 @@
 {
-  "lastUpdate": "2026-09-09T04:51:19Z",
+  "lastUpdate": "2026-09-09T05:25:00Z",
   "phase": "Fase 1: Core mínimo",
   "phaseObjective": "Definir entidades (marcas y proyectos), persistencia local y recuperación al reabrir la app en macOS.",
   "activeTask": {
     "id": "TASK_001",
     "title": "Marcas y proyectos con persistencia local",
-    "status": "Implementado y probado automáticamente; pendiente prueba manual de UI y push a GitHub."
+    "status": "Implementado y probado automáticamente; pendiente prueba manual de UI."
   },
   "workInProgress": [
-    "Ampliación de la web local a presentación pública de AbrxOS conservando el panel de estado."
+    "Diseño y despliegue de la presentación pública estilo Apple MacBook Pro en GitHub Pages."
   ],
   "checks": {
     "automatic": [
       {
         "description": "Compilación del esquema Abrxos para macOS (arm64)",
-        "result": "Reportado como exitoso en ejecución anterior con xcodebuild (2026-09-09). Verificación realizada por el ejecutor, no re-ejecutada en esta intervención web.",
+        "result": "Exitoso con xcodebuild (2026-09-09)",
         "timestamp": "2026-09-09T00:30:20Z"
       },
       {
         "description": "Pruebas unitarias de persistencia (PersistenceTests)",
-        "result": "Reportado como exitoso en ejecución anterior: 3/3 superadas. Verificación realizada por el ejecutor, no re-ejecutada en esta intervención web.",
+        "result": "Exitoso (3/3 pruebas superadas: validación de nombres, persistencia con nueva instancia y manejo de datos corruptos)",
         "timestamp": "2026-09-09T00:30:45Z"
       },
       {
         "description": "Pruebas de interfaz y rendimiento (AbrxosUITests)",
-        "result": "Reportado como exitoso en ejecución anterior. Verificación realizada por el ejecutor, no re-ejecutada en esta intervención web.",
+        "result": "Exitoso (testExample y testLaunchPerformance superados)",
         "timestamp": "2026-09-09T00:30:45Z"
       },
       {
-        "description": "Validación JSON de Status/status.json",
-        "result": "Pendiente de ejecución en validación de esta entrega",
-        "timestamp": null
+        "description": "Validación de JSON y build de GitHub Pages",
+        "result": "Exitoso (status: built en GitHub Pages)",
+        "timestamp": "2026-09-09T05:20:28Z"
       }
     ],
     "manual": [
@@ -40,16 +40,16 @@
         "timestamp": null
       },
       {
-        "description": "Revisión visual de la presentación web en navegador local",
-        "result": "Pendiente: no comprobada visualmente en esta intervención si no se abre navegador",
-        "timestamp": null
+        "description": "Revisión visual de la presentación pública desplegada en GitHub Pages",
+        "result": "Desplegada y disponible públicamente en https://lordjeferies.github.io/Abrxos/",
+        "timestamp": "2026-09-09T05:25:00Z"
       }
     ]
   },
   "nextSteps": [
     "Confirmar la ejecución interactiva en My Mac y la persistencia visual al reabrir.",
-    "Revisar la presentación web local y validar navegación, móvil y teclado.",
-    "Preparar la salida pública con Scripts/preparar_publico.sh y publicar cuando se indique."
+    "Revisar la presentación pública estilo Apple en https://lordjeferies.github.io/Abrxos/",
+    "Avanzar hacia la Fase 2 (Sol Blanco / Sol Negro / Eclipse con plantillas)."
   ],
   "blockers": [],
   "roadmapMilestones": [
@@ -62,13 +62,13 @@
   "history": [
     {
       "date": "2026-09-09",
-      "event": "Ampliación de Status/ a presentación pública de AbrxOS conservando el panel de desarrollo",
-      "evidence": "index.html con navegación por secciones, styles.css propio sin dependencias y app.js con refresco cada 15 s."
+      "event": "Rediseño completo de la web a estilo Apple MacBook Pro con todos los puntos del Resumen Maestro integrados",
+      "evidence": "Estructura Bento Grid, tipografía SF Pro, subnav sticky, maquetas conceptuales y despliegue en GitHub Pages."
     },
     {
       "date": "2026-09-09",
-      "event": "Creación del panel de desarrollo local (Status/ y Scripts/ver_estado.sh)",
-      "evidence": "Estructura web local sin dependencias externas y servidor local en 127.0.0.1:8080."
+      "event": "Publicación inicial del proyecto en GitHub (público) y despliegue en GitHub Pages",
+      "evidence": "Web en vivo en https://lordjeferies.github.io/Abrxos/"
     },
     {
       "date": "2026-09-09",

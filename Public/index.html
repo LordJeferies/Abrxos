@@ -3,218 +3,779 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="AbrxOS — sistema de producción de contenido: conocimiento de marca, estructuras creativas, análisis local y planes de producción ejecutables.">
-    <title>AbrxOS — Sistema de producción de contenido</title>
+    <meta name="description" content="AbrxOS — Sistema de inteligencia de producción de contenido. Convierte conocimiento de marca, estructuras creativas y material grabado en decisiones de contenido ejecutables.">
+    <title>AbrxOS — Sistema de Producción de Contenido</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <a class="skip-link" href="#contenido">Saltar al contenido</a>
+    <a class="skip-link" href="#contenido">Saltar al contenido principal</a>
 
+    <!-- APPLE-STYLE GLOBAL HEADER -->
     <header class="site-header">
         <div class="header-inner">
-            <a class="brand" href="#vision-general" aria-label="AbrxOS, inicio">AbrxOS</a>
-            <button id="menu-toggle" class="menu-toggle" aria-expanded="false" aria-controls="site-nav" aria-label="Abrir menú">☰</button>
+            <a class="brand" href="#hero" aria-label="AbrxOS, inicio">
+                <span class="brand-logo">A</span>
+                <span class="brand-name">AbrxOS</span>
+            </a>
+            
+            <button id="menu-toggle" class="menu-toggle" aria-expanded="false" aria-controls="site-nav" aria-label="Navegación mobile">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+
             <nav id="site-nav" class="site-nav" aria-label="Navegación principal">
                 <ul class="nav-list">
                     <li class="has-submenu">
-                        <button class="nav-top" aria-expanded="false" aria-haspopup="true">AbrxOS</button>
+                        <button class="nav-top" aria-expanded="false" aria-haspopup="true">Visión</button>
                         <ul class="submenu">
-                            <li><a href="#vision-general">Visión general</a></li>
-                            <li><a href="#que-resuelve">Qué resuelve</a></li>
-                            <li><a href="#recorrido-completo">Recorrido completo</a></li>
+                            <li><a href="#esencia">La Esencia</a></li>
+                            <li><a href="#que-es">Qué SÍ y NO es</a></li>
+                            <li><a href="#frase-resumen">Resumen Maestro</a></li>
                         </ul>
                     </li>
                     <li class="has-submenu">
                         <button class="nav-top" aria-expanded="false" aria-haspopup="true">Sistema</button>
                         <ul class="submenu">
-                            <li><a href="#sol-blanco">Sol Blanco</a></li>
-                            <li><a href="#sol-negro">Sol Negro</a></li>
-                            <li><a href="#eclipse">Eclipse</a></li>
-                            <li><a href="#arquitecto">Arquitecto</a></li>
+                            <li><a href="#soles-eclipse">Los Soles y Eclipse</a></li>
+                            <li><a href="#yod-shim">Yod y Shim</a></li>
+                            <li><a href="#la-ficha">La Ficha de Contenido</a></li>
+                            <li><a href="#el-arquitecto">El Arquitecto</a></li>
                         </ul>
                     </li>
                     <li class="has-submenu">
-                        <button class="nav-top" aria-expanded="false" aria-haspopup="true">Crear y descubrir</button>
+                        <button class="nav-top" aria-expanded="false" aria-haspopup="true">Motor</button>
                         <ul class="submenu">
-                            <li><a href="#yod">Yod</a></li>
-                            <li><a href="#shim">Shim</a></li>
-                            <li><a href="#fichas">Fichas Beta, Alfa y Omega</a></li>
+                            <li><a href="#analisis-local">Análisis Local</a></li>
+                            <li><a href="#gemini-potenciador">Gemini Potenciador</a></li>
+                            <li><a href="#corazon-mvp">Corazón del MVP</a></li>
+                            <li><a href="#timeline-visor">Timeline y Visor</a></li>
                         </ul>
                     </li>
                     <li class="has-submenu">
                         <button class="nav-top" aria-expanded="false" aria-haspopup="true">Producción</button>
                         <ul class="submenu">
-                            <li><a href="#timeline">Timeline</a></li>
                             <li><a href="#xrolls-brolls-motion">X-Rolls, B-Rolls y Motion</a></li>
-                            <li><a href="#assets">Assets</a></li>
-                            <li><a href="#cortes-exportacion">Cortes y exportación por lotes</a></li>
+                            <li><a href="#edit-plan">Edit Plan Semántico</a></li>
+                            <li><a href="#cortes-lotes">Cortes y Lotes</a></li>
+                            <li><a href="#subtitulos-formatos">Subtítulos y Formatos</a></li>
+                            <li><a href="#generacion-imagenes">Generación de Imágenes</a></li>
+                            <li><a href="#asset-registry">Asset Registry</a></li>
                         </ul>
                     </li>
                     <li class="has-submenu">
-                        <button class="nav-top" aria-expanded="false" aria-haspopup="true">Organización</button>
+                        <button class="nav-top" aria-expanded="false" aria-haspopup="true">Gestión</button>
                         <ul class="submenu">
-                            <li><a href="#marcas-proyectos">Marcas y proyectos</a></li>
-                            <li><a href="#revision">Revisión</a></li>
-                            <li><a href="#calendario">Calendario</a></li>
+                            <li><a href="#organizacion-archivos">Organización Automática</a></li>
+                            <li><a href="#revision-cliente">Revisión y Cliente</a></li>
+                            <li><a href="#calendario-publicacion">Calendario</a></li>
                             <li><a href="#aprendizaje">Aprendizaje</a></li>
+                            <li><a href="#automatizacion">Automatización Deseada</a></li>
+                            <li><a href="#filosofia-tecnica">Filosofía Técnica</a></li>
                         </ul>
                     </li>
-                    <li class="has-submenu">
-                        <button class="nav-top" aria-expanded="false" aria-haspopup="true">Desarrollo</button>
-                        <ul class="submenu">
-                            <li><a href="#estado-actual">Estado actual</a></li>
-                            <li><a href="#tarea-activa">Tarea activa</a></li>
-                            <li><a href="#roadmap">Roadmap</a></li>
-                            <li><a href="#comprobaciones">Comprobaciones</a></li>
-                            <li><a href="#historial">Historial</a></li>
-                        </ul>
+                    <li>
+                        <a href="#desarrollo" class="nav-link-status"><span class="pulse-dot"></span> Estado en Vivo</a>
                     </li>
                 </ul>
             </nav>
         </div>
     </header>
 
+    <!-- SUBNAV BAR (APPLE MACBOOK PRO STYLE STICKY RIBBON) -->
+    <div class="subnav-ribbon" id="subnav">
+        <div class="subnav-inner">
+            <span class="subnav-title">AbrxOS</span>
+            <div class="subnav-links">
+                <a href="#esencia">Esencia</a>
+                <a href="#que-es">Qué SÍ / NO es</a>
+                <a href="#soles-eclipse">Soles & Eclipse</a>
+                <a href="#la-ficha">La Ficha</a>
+                <a href="#corazon-mvp">El MVP</a>
+                <a href="#xrolls-brolls-motion">X-Rolls & Motion</a>
+                <a href="#desarrollo" class="subnav-highlight">Estado Dev</a>
+            </div>
+        </div>
+    </div>
+
     <main id="contenido">
-        <!-- HERO / VISIÓN GENERAL -->
-        <section class="hero" id="vision-general" tabindex="-1" aria-labelledby="hero-title">
-            <p class="kicker">AbrxOS · Aplicación macOS en construcción</p>
-            <h1 id="hero-title">Convierte conocimiento de marca y material grabado en un plan de producción ejecutable.</h1>
-            <p class="lede">AbrxOS no es un editor más. Es un sistema que conserva lo que sabe de cada marca, entiende estructuras creativas, analiza material local y propone qué piezas producir, cómo producirlas y con qué recursos.</p>
-            <div class="hero-actions">
-                <a class="btn primary" href="#recorrido-completo">Ver el recorrido</a>
-                <a class="btn secondary" href="#estado-actual">Ver estado real</a>
-            </div>
-            <ul class="estado-leyenda" aria-label="Leyenda de estado">
-                <li><span class="tag disponible">Disponible</span> comprobado en código o pruebas</li>
-                <li><span class="tag en-desarrollo">En desarrollo</span> implementado, pendiente de verificación manual</li>
-                <li><span class="tag previsto">Previsto</span> diseño aprobado, aún no implementado</li>
-            </ul>
-        </section>
+        
+        <!-- HERO SECTION (MACBOOK PRO STYLE DISPLAY HERO) -->
+        <section class="hero" id="hero">
+            <div class="hero-content">
+                <p class="eyebrow">Sistema de Producción de Contenido · macOS Native</p>
+                <h1 class="hero-title">Inteligencia de producción.<br><span class="hero-gradient">Decisiones ejecutables.</span></h1>
+                <p class="hero-subtitle">
+                    AbrxOS no es una app para editar videos con IA. Es un <strong>sistema de producción</strong> que conserva el conocimiento de tus marcas, entiende estructuras creativas, analiza material grabado localmente y construye mapas de producción ejecutables.
+                </p>
+                <div class="hero-actions">
+                    <a href="#esencia" class="btn primary">Explorar la Arquitectura</a>
+                    <a href="#desarrollo" class="btn secondary">Ver Estado del Desarrollo</a>
+                </div>
 
-        <section class="page-section" id="que-resuelve" tabindex="-1" aria-labelledby="t-que-resuelve">
-            <h2 id="t-que-resuelve">Qué resuelve</h2>
-            <p class="section-lede">El problema no es solo editar más rápido. Es decidir qué crear, dónde está el valor dentro de un material largo y cómo ejecutar sin repetir trabajo manual.</p>
-            <div class="grid-3">
-                <article class="feature"><h3>Decisiones antes de editar</h3><p>Qué contenido crear, qué formato corresponde a cada fragmento y qué piezas tienen sentido para cada marca y objetivo.</p></article>
-                <article class="feature"><h3>Valor escondido</h3><p>Localizar segmentos útiles dentro de grabaciones largas para convertirlos en clips, carruseles, guiones o publicaciones.</p></article>
-                <article class="feature"><h3>Ejecución sin repetición</h3><p>Definir una vez cada recurso y reutilizarlo por referencia, con cortes planificados como datos antes de exportar.</p></article>
-            </div>
-            <p class="nota">AbrxOS no intenta sustituir a un editor tradicional como objetivo inicial. Su ventaja es comprender el contenido y convertirlo en un plan ejecutable.</p>
-        </section>
+                <!-- FLOW BADGE RIBBON -->
+                <div class="hero-flow-container">
+                    <p class="hero-flow-label">El Flujo Conceptual Completo:</p>
+                    <div class="hero-flow-pills">
+                        <span>Información</span> → 
+                        <span>Análisis</span> → 
+                        <span>Planificación</span> → 
+                        <span>Visualización</span> → 
+                        <span>Producción</span> → 
+                        <span>Edición</span> → 
+                        <span>Revisión</span> → 
+                        <span>Publicación</span> → 
+                        <span>Aprendizaje</span>
+                    </div>
+                </div>
 
-        <section class="page-section alt" id="recorrido-completo" tabindex="-1" aria-labelledby="t-recorrido">
-            <h2 id="t-recorrido">Recorrido completo</h2>
-            <p class="section-lede">Información → análisis → planificación → visualización → producción → edición → revisión → publicación → aprendizaje.</p>
-            <div class="mock" role="img" aria-label="Maqueta conceptual del flujo de AbrxOS">
-                <span class="mock-label">Maqueta conceptual — no es una captura real</span>
-                <ol class="flow">
-                    <li>Marca y objetivo</li>
-                    <li>Análisis local</li>
-                    <li>Mapa de producción</li>
-                    <li>Timeline</li>
-                    <li>Cortes y lote</li>
-                    <li>Revisión</li>
-                    <li>Aprendizaje</li>
-                </ol>
+                <div class="hero-tags-legend">
+                    <span class="tag disponible">Disponible (Código/Tests)</span>
+                    <span class="tag en-desarrollo">En Desarrollo (TASK_001)</span>
+                    <span class="tag previsto">Previsto (Diseño Aprobado)</span>
+                </div>
             </div>
         </section>
 
-        <!-- SISTEMA -->
-        <section class="page-section" id="sistema" aria-labelledby="t-sistema">
-            <h2 id="t-sistema">Sistema</h2>
-            <div class="grid-2">
-                <article id="sol-blanco" tabindex="-1"><p class="tag previsto">Previsto</p><h3>Sol Blanco</h3><p>Memoria estructurada de cada marca: identidad, audiencia, tono, pilares, vocabulario, objetivos, estilo visual, reglas y límites. Dato editable y versionado, no texto fijo en el código.</p></article>
-                <article id="sol-negro" tabindex="-1"><p class="tag previsto">Previsto</p><h3>Sol Negro</h3><p>Biblioteca de conocimiento creativo: estructuras de reels, guiones, hooks, X-Rolls, B-Rolls, motions, ritmos, subtítulos y recetas reutilizables.</p></article>
-                <article id="eclipse" tabindex="-1"><p class="tag previsto">Previsto</p><h3>Eclipse</h3><p>Coordina marca, material y estructuras disponibles para responder qué tiene sentido crear. Su salida son objetos y decisiones de producción, no solo texto.</p></article>
-                <article id="arquitecto" tabindex="-1"><p class="tag previsto">Previsto</p><h3>Arquitecto</h3><p>Asistente contextual: explica la ficha abierta, qué falta y cómo ejecutarla. Regla: conservar → comprender → explicar → mejorar. Las explicaciones útiles se guardan para consulta sin conexión.</p></article>
+        <!-- STATEMENT CALLOUT (BIG APPLE-STYLE TYPOGRAPHY STATEMENT) -->
+        <section class="statement-section">
+            <div class="container">
+                <p class="big-statement">
+                    “No construir primero un editor. Construir primero el sistema que sabe qué hay que crear, por qué, dónde, cómo y con qué recursos; después automatizar su ejecución.”
+                </p>
             </div>
         </section>
 
-        <!-- CREAR Y DESCUBRIR -->
-        <section class="page-section alt" id="crear-descubrir" aria-labelledby="t-crear">
-            <h2 id="t-crear">Crear y descubrir</h2>
-            <div class="grid-3">
-                <article id="yod" tabindex="-1"><p class="tag previsto">Previsto</p><h3>Yod</h3><p>Crear desde una idea: marca, campaña, objetivo y estructura para generar ideas, hooks, guiones, copies y planes Alfa completos.</p></article>
-                <article id="shim" tabindex="-1"><p class="tag previsto">Previsto</p><h3>Shim</h3><p>Descubrir desde material existente: video, audio o transcripción para encontrar intros, clips, carruseles, citas y segmentos.</p></article>
-                <article id="fichas" tabindex="-1"><p class="tag previsto">Previsto</p><h3>Fichas Beta, Alfa y Omega</h3><p>El contenido es una ficha que evoluciona: Beta (idea), Alfa (plan completo), En producción, Omega (terminada), Aprobada / publicada y Analizada. El vídeo es un archivo asociado, no la ficha.</p></article>
+        <!-- SECCIÓN 1: LA ESENCIA DE ABRXOS -->
+        <section class="section-padding" id="esencia">
+            <div class="container">
+                <p class="section-eyebrow">1. La Esencia de AbrxOS</p>
+                <h2 class="section-title">El verdadero problema no es editar más rápido.<br><span class="text-silver">Es la cadena de decisiones.</span></h2>
+                
+                <div class="grid-2-equal gap-2">
+                    <div class="apple-card">
+                        <div class="card-icon">🎯</div>
+                        <h3>Saber qué contenido crear</h3>
+                        <p class="card-text">
+                            El problema real ocurre antes, durante y después de editar: encontrar qué partes de un podcast tienen valor, decidir qué formato corresponde a cada fragmento, definir X-Rolls, B-Rolls, cambios de cámara, SFX, textos, imágenes, movimientos, prompts, exportaciones, carpetas, revisiones y publicaciones.
+                        </p>
+                    </div>
+
+                    <div class="apple-card">
+                        <div class="card-icon">⚡</div>
+                        <h3>Comprender antes de editar</h3>
+                        <p class="card-text">
+                            AbrxOS <strong>no empieza intentando convertirse en Premiere, Final Cut, CapCut o DaVinci</strong>. Su ventaja estratégica es comprender el contenido y convertirlo en un plan de producción ejecutable. El editor avanzado puede crecer después.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- META PRÁCTICA CONCRETA -->
+                <div class="apple-card highlight-card margin-top-15">
+                    <div class="badge-tag">Meta Práctica Concreta</div>
+                    <h3>Tomar un podcast de 2 horas y convertirlo en decenas de piezas útiles</h3>
+                    <p>
+                        Poder extraer clips verticales, videos horizontales, intros, carruseles, guiones y publicaciones manteniéndola más alta calidad visual de marca y sin repetir manualmente el mismo trabajo.
+                    </p>
+                </div>
             </div>
-            <p class="nota">El análisis audiovisual será principalmente local. La asistencia externa es opcional y nunca sustituye el funcionamiento sin conexión.</p>
         </section>
 
-        <!-- PRODUCCIÓN -->
-        <section class="page-section" id="produccion" aria-labelledby="t-prod">
-            <h2 id="t-prod">Producción</h2>
-            <div class="grid-2">
-                <article id="timeline" tabindex="-1"><p class="tag previsto">Previsto</p><h3>Timeline</h3><p>Representación de inteligencia de producción con capas para cortes, clips, X-Rolls, B-Rolls, motions, subtítulos, música y notas. El visor mostrará explicaciones superpuestas, identificadas como maqueta conceptual hasta su implementación.</p></article>
-                <article id="xrolls-brolls-motion" tabindex="-1"><p class="tag previsto">Previsto</p><h3>X-Rolls, B-Rolls y Motion</h3><p><strong>X-Roll:</strong> estructura visual narrativa. <strong>B-Roll:</strong> material complementario. <strong>Motion:</strong> cómo se mueve un elemento. Separación estricta.</p></article>
-                <article id="assets" tabindex="-1"><p class="tag previsto">Previsto</p><h3>Assets</h3><p>Registro central por identidad: definición (qué crear), instancia (archivo generado) y uso (dónde se usa). La reutilización se propone por identidad; no se promete deduplicación automática de recursos equivalentes.</p></article>
-                <article id="cortes-exportacion" tabindex="-1"><p class="tag previsto">Previsto</p><h3>Cortes y exportación por lotes</h3><p>Los cortes existen primero como objetos de datos y después se exportan en lote. La exportación masiva pertenece al primer AbrxOS útil, una vez el mapa de producción sea fiable.</p></article>
+        <!-- SECCIÓN 2: QUÉ ES Y QUÉ NO ES (BENTO COMPARISON GRID) -->
+        <section class="section-padding bg-subtle" id="que-es">
+            <div class="container">
+                <p class="section-eyebrow">2. Definición del Sistema</p>
+                <h2 class="section-title">Qué SÍ es y qué NO es AbrxOS</h2>
+                <p class="section-description">
+                    La arquitectura separa producto, servicios compartidos e integraciones precisamente para que la lógica de AbrxOS no dependa de una tecnología externa específica.
+                </p>
+
+                <div class="bento-grid">
+                    <!-- BENTO CARDS SÍ vs NO -->
+                    <div class="bento-card bento-yes">
+                        <span class="bento-badge yes-badge">AbrxOS SÍ es</span>
+                        <h4>Un sistema de inteligencia de producción</h4>
+                        <p>Diseñado para organizar marcas, comprender estructuras creativas y coordinar la ejecución.</p>
+                    </div>
+                    <div class="bento-card bento-no">
+                        <span class="bento-badge no-badge">AbrxOS NO es</span>
+                        <h4>Un wrapper que manda prompts a Gemini</h4>
+                        <p>No depende exclusivamente de llamadas a un proveedor ni es un simple chat generativo.</p>
+                    </div>
+
+                    <div class="bento-card bento-yes">
+                        <span class="bento-badge yes-badge">AbrxOS SÍ es</span>
+                        <h4>Un cerebro de contexto por marca</h4>
+                        <p>Estructura y guarda las reglas, estilo visual, pilares y limitaciones de cada cliente.</p>
+                    </div>
+                    <div class="bento-card bento-no">
+                        <span class="bento-badge no-badge">AbrxOS NO es</span>
+                        <h4>Una colección de chats desconectados</h4>
+                        <p>Los datos no se pierden en conversaciones de chat; evolucionan en fichas de contenido.</p>
+                    </div>
+
+                    <div class="bento-card bento-yes">
+                        <span class="bento-badge yes-badge">AbrxOS SÍ es</span>
+                        <h4>Un analizador de video, audio y transcripciones</h4>
+                        <p>Aprovecha motores y frameworks locales para extraer el valor de las grabaciones.</p>
+                    </div>
+                    <div class="bento-card bento-no">
+                        <span class="bento-badge no-badge">AbrxOS NO es</span>
+                        <h4>Una app que sube podcasts enteros a una IA</h4>
+                        <p>No gasta ancho de banda ni cuotas subiendo videos de 4 horas a la nube.</p>
+                    </div>
+
+                    <div class="bento-card bento-yes">
+                        <span class="bento-badge yes-badge">AbrxOS SÍ es</span>
+                        <h4>Un generador de planes de producción</h4>
+                        <p>Construye planes de edición, listas de assets, marcas de tiempo e instrucciones.</p>
+                    </div>
+                    <div class="bento-card bento-no">
+                        <span class="bento-badge no-badge">AbrxOS NO es</span>
+                        <h4>Un editor tradicional como objetivo principal</h4>
+                        <p>No busca competir de entrada con editores de timeline tradicionales sin inteligencia.</p>
+                    </div>
+
+                    <div class="bento-card bento-yes">
+                        <span class="bento-badge yes-badge">AbrxOS SÍ es</span>
+                        <h4>Un visor inteligente con timeline</h4>
+                        <p>Muestra capas de inteligencia (cortes, B-Rolls, SFX) con explicaciones superpuestas.</p>
+                    </div>
+                    <div class="bento-card bento-no">
+                        <span class="bento-badge no-badge">AbrxOS NO es</span>
+                        <h4>Una simple lista de sugerencias en texto</h4>
+                        <p>Su salida no es un bloque de Markdown plano; son objetos y estructuras de datos.</p>
+                    </div>
+
+                    <div class="bento-card bento-yes">
+                        <span class="bento-badge yes-badge">AbrxOS SÍ es</span>
+                        <h4>Un sistema de automatización por lotes</h4>
+                        <p>Permite seleccionar decenas de piezas y producirlas/exportarlas de una sola vez.</p>
+                    </div>
+                    <div class="bento-card bento-no">
+                        <span class="bento-badge no-badge">AbrxOS NO es</span>
+                        <h4>Exportar 50 clips uno a uno manualmente</h4>
+                        <p>Elimina las tareas repetitivas de exportación manual individual.</p>
+                    </div>
+
+                    <div class="bento-card bento-yes">
+                        <span class="bento-badge yes-badge">AbrxOS SÍ es</span>
+                        <h4>Un gestor de assets reutilizables</h4>
+                        <p>Registra imágen/recursos por identidad (`AssetDefinition`) para usarlos en múltiples piezas.</p>
+                    </div>
+                    <div class="bento-card bento-no">
+                        <span class="bento-badge no-badge">AbrxOS NO es</span>
+                        <h4>Generar la misma imagen cinco veces</h4>
+                        <p>No duplica generación de recursos idénticos ni malgasta costos.</p>
+                    </div>
+
+                    <div class="bento-card bento-yes">
+                        <span class="bento-badge yes-badge">AbrxOS SÍ es</span>
+                        <h4>Asistente offline que mejora online</h4>
+                        <p>Sigue siendo 100% funcional con reglas y plantillas sin conexión a internet.</p>
+                    </div>
+                    <div class="bento-card bento-no">
+                        <span class="bento-badge no-badge">AbrxOS NO es</span>
+                        <h4>Una app inútil cuando Gemini no está disponible</h4>
+                        <p>La caída o ausencia de una API no detiene el trabajo local.</p>
+                    </div>
+                </div>
             </div>
-            <div class="mock" role="img" aria-label="Maqueta conceptual de timeline"><span class="mock-label">Maqueta conceptual — no es una captura real</span><div class="mock-timeline"><span>XR01 · 00:42–00:49 · 2/3 recursos</span></div></div>
         </section>
 
-        <!-- ORGANIZACIÓN -->
-        <section class="page-section alt" id="organizacion" aria-labelledby="t-org">
-            <h2 id="t-org">Organización</h2>
-            <div class="grid-2">
-                <article id="marcas-proyectos" tabindex="-1"><p class="tag en-desarrollo">En desarrollo</p><h3>Marcas y proyectos</h3><p>Crear y listar marcas, crear proyectos asociados, guardar localmente y recuperar al reabrir. Nombres no vacíos, identificadores estables y errores comprensibles en español.</p></article>
-                <article id="revision" tabindex="-1"><p class="tag previsto">Previsto</p><h3>Revisión</h3><p>Flujo futuro donde un cliente visualiza, aprueba o corrige fichas y el estado vuelve a AbrxOS.</p></article>
-                <article id="calendario" tabindex="-1"><p class="tag previsto">Previsto</p><h3>Calendario</h3><p>Tablero de Beta, Alfa, producción, revisión, aprobado y publicado, con plataformas y fechas. La publicación automática llegará después.</p></article>
-                <article id="aprendizaje" tabindex="-1"><p class="tag previsto">Previsto</p><h3>Aprendizaje</h3><p>Relacionar métricas publicadas con decisiones creativas para proponer mejoras. Ningún cambio importante a reglas maestras será automático: requerirá confirmación.</p></article>
+        <!-- SECCIÓN 3: LOS DOS SOLES Y ECLIPSE -->
+        <section class="section-padding" id="soles-eclipse">
+            <div class="container">
+                <p class="section-eyebrow">3. Arquitectura Creativa</p>
+                <h2 class="section-title">Los dos “Soles” y Eclipse</h2>
+                <p class="section-description">
+                    Separación clara entre la memoria de marca por un lado y las estructuras de producción por otro.
+                </p>
+
+                <div class="grid-3 gap-2">
+                    <div class="apple-card feature-card-white">
+                        <div class="card-tag previsto">Previsto</div>
+                        <h3>Sol Blanco</h3>
+                        <p class="card-subtitle">La Memoria de Marca</p>
+                        <p class="card-text">
+                            Conoce identidad, propósito, nicho, audiencia, tono, pilares, vocabulario, objetivos, qué vende, cómo comunica, estilo visual, logotipos, colores, reglas, preferencias de subtítulos y límites. Convertido progresivamente en datos estructurados consultables.
+                        </p>
+                    </div>
+
+                    <div class="apple-card feature-card-black">
+                        <div class="card-tag previsto">Previsto</div>
+                        <h3>Sol Negro</h3>
+                        <p class="card-subtitle">Biblioteca Creativa y Productiva</p>
+                        <p class="card-text">
+                            Contiene estructuras de reels, shorts, videos horizontales, intros, podcasts, carruseles, hooks, guiones, X-Rolls, B-Rolls, motions, reglas de edición, subtítulos, ritmos, criterios de retención, prompts y estilos reutilizables.
+                        </p>
+                    </div>
+
+                    <div class="apple-card feature-card-eclipse">
+                        <div class="card-tag previsto">Previsto</div>
+                        <h3>Eclipse</h3>
+                        <p class="card-subtitle">El Coordinador Central</p>
+                        <p class="card-text">
+                            ¿Qué tiene sentido crear para <strong>esta marca</strong>, con <strong>este material</strong> y utilizando <strong>estas estructuras</strong>? Combina Sol Blanco + Sol Negro + Análisis + Objetivo. Su salida son objetos y decisiones de producción.
+                        </p>
+                    </div>
+                </div>
             </div>
         </section>
 
-        <!-- DESARROLLO: panel conservado -->
-        <section class="page-section dev" id="desarrollo" aria-labelledby="t-des">
-            <h2 id="t-des">Desarrollo</h2>
-            <p class="section-lede">Estado real del proyecto. Los datos se cargan desde <code>status.json</code> y se actualizan cada 15 segundos sin recargar.</p>
-            <div class="dev-meta">
-                <span id="connection-status" class="badge connecting">Conectando...</span>
-                <span id="last-query" class="meta-time">Última consulta: --:--:--</span>
-                <span id="last-state-update" class="meta-time">Última actualización de estado: --:--:--</span>
-            </div>
-            <div id="error-banner" class="error-banner hidden">⚠️ Error al actualizar los datos o JSON inválido. Se muestra la última información válida conocida.</div>
+        <!-- SECCIÓN 4: YOD Y SHIM -->
+        <section class="section-padding bg-subtle" id="yod-shim">
+            <div class="container">
+                <p class="section-eyebrow">4. Caminos de Entrada</p>
+                <h2 class="section-title">Yod y Shim: Dos entradas al mismo sistema</h2>
 
-            <div class="dashboard-grid">
-                <article class="card" id="estado-actual" tabindex="-1">
-                    <h3>Estado actual</h3>
-                    <p class="label">Fase actual:</p><p id="current-phase" class="value-highlight">Cargando...</p>
-                    <p class="label">Objetivo de fase:</p><p id="phase-objective">Cargando...</p>
-                    <p class="label">Trabajo en curso:</p>
-                    <ul id="work-in-progress-list" class="bullet-list"><li>Cargando...</li></ul>
-                </article>
-                <article class="card" id="tarea-activa" tabindex="-1">
-                    <h3>Tarea activa</h3>
-                    <div class="task-box"><span id="active-task-id" class="task-badge">---</span><strong id="active-task-title">Cargando...</strong></div>
-                    <p id="active-task-status" class="task-status-text">---</p>
-                    <h4>Próximos pasos</h4>
-                    <ol id="next-steps-list" class="numbered-list"><li>Cargando...</li></ol>
-                    <h4>Bloqueos</h4>
-                    <div id="blockers-container"><p class="none-text">Sin bloqueos registrados.</p></div>
-                </article>
-                <article class="card" id="roadmap" tabindex="-1">
-                    <h3>Roadmap</h3>
-                    <div class="table-responsive"><table class="roadmap-table"><thead><tr><th>Fase</th><th>Hito</th><th>Estado</th></tr></thead><tbody id="roadmap-tbody"><tr><td colspan="3">Cargando...</td></tr></tbody></table></div>
-                </article>
-                <article class="card" id="comprobaciones" tabindex="-1">
-                    <h3>Comprobaciones</h3>
-                    <h4>Automáticas</h4>
-                    <ul id="auto-checks-list" class="check-list"><li>Cargando...</li></ul>
-                    <h4>Manuales</h4>
-                    <ul id="manual-checks-list" class="check-list"><li>Cargando...</li></ul>
-                </article>
-                <article class="card full-width" id="historial" tabindex="-1">
-                    <h3>Historial</h3>
-                    <div class="timeline" id="history-timeline"><p>Cargando...</p></div>
-                </article>
+                <div class="grid-2-equal gap-2">
+                    <div class="apple-card">
+                        <div class="card-header-row">
+                            <span class="card-badge-large">Yod</span>
+                            <span class="card-tag previsto">Previsto</span>
+                        </div>
+                        <h3>Crear desde una idea</h3>
+                        <p class="card-text">
+                            Trabaja cuando todavía no existe una grabación. Partiendo de <strong>Marca + Campaña + Objetivo + Estructura</strong>, genera ideas, hooks, guiones, copies, carruseles, reels a grabar, prompts, dirección visual y planes Alfa completos.
+                        </p>
+                    </div>
+
+                    <div class="apple-card">
+                        <div class="card-header-row">
+                            <span class="card-badge-large">Shim</span>
+                            <span class="card-tag previsto">Previsto</span>
+                        </div>
+                        <h3>Descubrir desde material existente</h3>
+                        <p class="card-text">
+                            Trabaja al revés. Se le entrega video, audio, podcast o transcripción ya grabada y pregunta: <em>“¿Qué contenido existe escondido aquí?”</em>. Detecta intros, clips verticales/horizontales, carruseles, citas, hilos y derivaciones.
+                        </p>
+                    </div>
+                </div>
             </div>
         </section>
+
+        <!-- SECCIÓN 5: LA FICHA COMO UNIDAD CENTRAL -->
+        <section class="section-padding" id="la-ficha">
+            <div class="container">
+                <p class="section-eyebrow">5. Modelo de Datos</p>
+                <h2 class="section-title">La Ficha es la unidad central de contenido</h2>
+                <p class="section-description">
+                    El contenido no debe ser solamente un archivo. Existe un objeto/ficha que evoluciona en 6 etapas fundamentales:
+                </p>
+
+                <!-- PIPELINE DE FICHAS -->
+                <div class="pipeline-container">
+                    <div class="pipeline-step">
+                        <div class="step-num">1</div>
+                        <h4>Beta</h4>
+                        <p>La idea: título, propósito, campaña, plataforma, formato, estructura y primeras nociones.</p>
+                    </div>
+
+                    <div class="pipeline-step">
+                        <div class="step-num">2</div>
+                        <h4>Alfa</h4>
+                        <p>Planificación completa: guion, copy, timestamps, X-Rolls, B-Rolls, SFX, imágenes y prompts.</p>
+                    </div>
+
+                    <div class="pipeline-step">
+                        <div class="step-num">3</div>
+                        <h4>En Producción</h4>
+                        <p>Estado de creación: archivos asignados, avances de edición y recursos pendientes.</p>
+                    </div>
+
+                    <div class="pipeline-step">
+                        <div class="step-num">4</div>
+                        <h4>Omega</h4>
+                        <p>La pieza terminada y empaquetada, lista para revisión.</p>
+                    </div>
+
+                    <div class="pipeline-step">
+                        <div class="step-num">5</div>
+                        <h4>Aprobado / Publicado</h4>
+                        <p>Versión definitiva, fechas programadas y estados por plataforma.</p>
+                    </div>
+
+                    <div class="pipeline-step">
+                        <div class="step-num">6</div>
+                        <h4>Analizado</h4>
+                        <p>Métricas de rendimiento que generan aprendizaje para contenidos futuros.</p>
+                    </div>
+                </div>
+
+                <div class="apple-card quote-box margin-top-15">
+                    <p class="quote-text">
+                        “El vídeo <code>.mp4</code> NO es el contenido. Es únicamente uno de los archivos asociados al contenido.”
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECCIÓN 6 & 7: ANÁLISIS LOCAL + GEMINI POTENCIADOR -->
+        <section class="section-padding bg-subtle" id="analisis-local">
+            <div class="container">
+                <p class="section-eyebrow">6 & 7. Procesamiento Híbrido</p>
+                <h2 class="section-title">El análisis audiovisual debe ser local.<br><span class="text-silver">Gemini es un potenciador, no una dependencia.</span></h2>
+
+                <div class="grid-2-equal gap-2">
+                    <div class="apple-card">
+                        <div class="card-tag disponible">Sentidos Locales</div>
+                        <h3>Frameworks locales de macOS</h3>
+                        <p class="card-text">
+                            Gemini no sustituye a <strong>AVFoundation, Vision, Speech, Core ML o Whisper</strong>. Un podcast de 4 horas no necesita subirse a la nube. Localmente se extraen transcripción, hablantes, timestamps, escenas, encuadres, movimiento, rostros, silencios y ritmo.
+                        </p>
+                        <div class="code-preview">
+Segmento 00:13:42
+Speaker: invitado
+Texto: "..."
+Tema: automatización
+Emoción: reflexiva
+Visual: primer plano
+Cambio de cámara: 00:13:47
+                        </div>
+                    </div>
+
+                    <div class="apple-card" id="gemini-potenciador">
+                        <div class="card-tag disponible">Híbrido Autónomo</div>
+                        <h3>Operación Sin vs Con Gemini</h3>
+                        <p class="card-text">
+                            <strong>Sin Gemini:</strong> AbrxOS opera 100% offline con Sol Blanco, Sol Negro, reglas, análisis local, fichas, timeline y Arquitecto offline.<br><br>
+                            <strong>Con Gemini:</strong> Eclipse razona con mayor profundidad (mejores hooks, metáforas visuales, X-Rolls complejas, prompts enriquecidos).
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECCIÓN 8: EL ARQUITECTO -->
+        <section class="section-padding" id="el-arquitecto">
+            <div class="container">
+                <p class="section-eyebrow">8. Asistente Contextual</p>
+                <h2 class="section-title">El Arquitecto</h2>
+                <p class="section-description">
+                    No es simplemente un chatbot. Conoce qué marca tienes abierta, qué contenido estás viendo, qué parte del timeline está seleccionada y qué recursos faltan.
+                </p>
+
+                <div class="grid-2-equal gap-2">
+                    <div class="apple-card">
+                        <h3>Arquitecto Offline</h3>
+                        <p class="card-text">
+                            Aplica reglas existentes. Puede guiarte incluso si estás editando externamente (ej. CapCut):<br>
+                            <em>“Este segmento tiene XR04 del segundo 14 al 21. Faltan dos imágenes. Usa el Motion Slow Push.”</em>
+                        </p>
+                    </div>
+
+                    <div class="apple-card">
+                        <h3>Regla de Arquitecto + Gemini</h3>
+                        <div class="rule-flow">
+                            <span>conservar</span> → <span>comprender</span> → <span>explicar</span> → <span>mejorar</span>
+                        </div>
+                        <p class="card-text margin-top-10">
+                            Nunca cambiar o reinventar arbitrariamente. Si se genera una explicación valiosa online, esta persiste localmente para consultas offline futuras.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECCIÓN 9 & 10: CORAZÓN DEL MVP Y TIMELINE INTELIGENTE -->
+        <section class="section-padding bg-subtle" id="corazon-mvp">
+            <div class="container">
+                <p class="section-eyebrow">9 & 10. Experiencia Principal</p>
+                <h2 class="section-title">El Corazón del MVP:<br>Podcast ➔ Mapa Completo de Producción</h2>
+
+                <div class="apple-card highlight-hero-card">
+                    <h3>“Subí un podcast y ahora sé exactamente qué 40–60 contenidos puedo sacar, dónde empiezan y terminan, cómo deberían editarse y puedo exportarlos por lote.”</h3>
+                </div>
+
+                <div class="grid-2-equal gap-2 margin-top-20" id="timeline-visor">
+                    <div class="apple-card">
+                        <div class="card-tag previsto">Previsto (Maqueta Concept)</div>
+                        <h3>Visor y Timeline Inteligente</h3>
+                        <p class="card-text">
+                            Timeline con capas de inteligencia de producción: cortes, clips, X-Rolls, B-Rolls, motions, subtítulos, SFX, música y notas. Al seleccionar un elemento, el visor atenúa el video y muestra un overlay explicativo interactivo.
+                        </p>
+                    </div>
+
+                    <div class="mock-window">
+                        <div class="mock-header">
+                            <span class="dot red"></span>
+                            <span class="dot yellow"></span>
+                            <span class="dot green"></span>
+                            <span class="mock-title">AbrxOS — Visor Inteligente Overlay</span>
+                        </div>
+                        <div class="mock-body">
+                            <div class="overlay-box">
+                                <strong>XR01 · 00:42–00:49</strong><br>
+                                3 imágenes requeridas<br>
+                                Imagen A: Concepto Automatización<br>
+                                Imagen B: Diagrama de Flujo<br>
+                                Motion: Parallax suave<br>
+                                Status: 2/3 assets generados
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECCIÓN 11 & 12: X-ROLLS, B-ROLLS, MOTIONS & EDIT PLAN -->
+        <section class="section-padding" id="xrolls-brolls-motion">
+            <div class="container">
+                <p class="section-eyebrow">11 & 12. Reglas de Producción Visual</p>
+                <h2 class="section-title">X-Rolls, B-Rolls, Motions & Edit Plan Semántico</h2>
+
+                <div class="grid-3 gap-2">
+                    <div class="apple-card">
+                        <h3>X-Roll</h3>
+                        <p class="card-subtitle">Estructura Visual Narrativa</p>
+                        <p class="card-text">
+                            Define por qué aparece, qué comunica, número de imágenes necesarias, prompts y posición discursiva. Se almacena como estructura rica, no como simple imagen estática.
+                        </p>
+                    </div>
+
+                    <div class="apple-card">
+                        <h3>B-Roll</h3>
+                        <p class="card-subtitle">Material Complementario</p>
+                        <p class="card-text">
+                            Toma real, recurso stock, video o imagen que apoya el relato. Contiene timestamp, plano, descripción y término de búsqueda o prompt.
+                        </p>
+                    </div>
+
+                    <div class="apple-card">
+                        <h3>Motion</h3>
+                        <p class="card-subtitle">Dinámica de Movimiento</p>
+                        <p class="card-text">
+                            Cómo se mueve un elemento: zoom in/out, pan, parallax, escala, keyframes, rack focus, rotación o cámara virtual. Un X-Roll estático puede recibir uno o varios Motions.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- EDIT PLAN SEMÁNTICO -->
+                <div class="apple-card margin-top-20" id="edit-plan">
+                    <div class="badge-tag">Regla de Oro de Edición</div>
+                    <h3>El significado manda sobre la cuadrícula</h3>
+                    <p class="card-text">
+                        AbrxOS genera Edit Plans temporales (0s entrada → 3s push-in → 7s cambio cámara → 12s XR01 → 16s SFX). Si una frase termina en 3,5s, no se destruye sólo por cumplir una regla rígida de tiempo. Se ejecutan <strong>cortes semánticos</strong>.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECCIÓN 13 A 18: HERRAMIENTAS DE PRODUCCIÓN, ASSETS Y ARCHIVOS -->
+        <section class="section-padding bg-subtle" id="cortes-lotes">
+            <div class="container">
+                <p class="section-eyebrow">13 a 18. Módulos de Producción & Assets</p>
+                <h2 class="section-title">Herramientas de Ejecución por Lotes</h2>
+
+                <div class="grid-2-equal gap-2">
+                    <div class="apple-card">
+                        <div class="card-tag disponible">MVP Core</div>
+                        <h3>Cortar y Exportar por Lotes</h3>
+                        <p class="card-text">
+                            Los cortes existen como <code>Cut Objects</code> (fuente, inicio, final, formato, perfil de exportación). El motor procesa selección masiva de 10, 20 o 50+ piezas en un solo proceso.
+                        </p>
+                    </div>
+
+                    <div class="apple-card" id="subtitulos-formatos">
+                        <div class="card-tag previsto">Previsto</div>
+                        <h3>Subtítulos y Multiformato</h3>
+                        <p class="card-text">
+                            Subtítulos estilizados con división semántica, palabras activas y branding. Una misma ficha deriva en reels, carruseles, guiones, posts, hilos y audio limpio.
+                        </p>
+                    </div>
+
+                    <div class="apple-card" id="generacion-imagenes">
+                        <div class="card-tag previsto">Interfaz Intercambiable</div>
+                        <h3>Generación de Imágenes</h3>
+                        <p class="card-text">
+                            Define qué imagen necesita y cómo crearla (prompt, tamaño, composición, estilo). Compatible con Gemini Image, ComfyUI o modelos locales sin amarrar el producto a un proveedor.
+                        </p>
+                    </div>
+
+                    <div class="apple-card" id="asset-registry">
+                        <div class="card-tag previsto">Registro Central</div>
+                        <h3>Asset Factory & Asset Registry</h3>
+                        <p class="card-text">
+                            Si una imagen se usa en un episodio, reel y clip horizontal, AbrxOS la genera <strong>una sola vez</strong> mediante <code>AssetDefinition</code>, <code>AssetInstance</code> y <code>AssetUsage</code>.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="apple-card margin-top-20" id="organizacion-archivos">
+                    <h3>Organización Automática de Archivos</h3>
+                    <p class="card-text">
+                        Estructura lógica separada de carpetas físicas (`Cliente / Proyecto / Contenido / Original / Análisis / Exportaciones`). La <strong>base de datos lógica ≠ carpetas físicas</strong>; AbrxOS rastrea los archivos aunque cambien de ubicación.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECCIÓN 19 A 21: REVISIÓN, CALENDARIO Y APRENDIZAJE -->
+        <section class="section-padding" id="revision-cliente">
+            <div class="container">
+                <p class="section-eyebrow">19 a 21. Ciclo de Cierre</p>
+                <h2 class="section-title">Revisión, Calendario & Aprendizaje</h2>
+
+                <div class="grid-3 gap-2">
+                    <div class="apple-card" id="revision">
+                        <h3>Revisión y Cliente</h3>
+                        <p class="card-text">
+                            Módulo para compartir avances donde un cliente aprueba, rechaza o escribe correcciones, sincronizando el estado directamente con AbrxOS.
+                        </p>
+                    </div>
+
+                    <div class="apple-card" id="calendario-publicacion">
+                        <h3>Calendario y Tablero</h3>
+                        <p class="card-text">
+                            Dashboard drag-and-drop para visualizar el estado de cada pieza (Beta, Alfa, Producción, Revisión, Programado, Publicado).
+                        </p>
+                    </div>
+
+                    <div class="apple-card" id="aprendizaje">
+                        <h3>Aprendizaje de Resultados</h3>
+                        <p class="card-text">
+                            Correlaciona métricas (retención, views, interacciones) con elementos creativos (hooks, X-Rolls, ritmo) para sugerir mejoras a Sol Blanco/Negro con confirmación humana.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECCIÓN 22 A 25: AUTOMATIZACIÓN, ROADMAP Y FILOSOFÍA -->
+        <section class="section-padding bg-subtle" id="automatizacion">
+            <div class="container">
+                <p class="section-eyebrow">22 a 25. La Visión Final</p>
+                <h2 class="section-title">Experiencia Final & Filosofía Técnica</h2>
+
+                <div class="apple-card highlight-card">
+                    <h3>“AbrxOS, procesa este episodio.”</h3>
+                    <p class="margin-top-10">
+                        Análisis local ➔ transcripción ➔ hallazgo de contenidos ➔ fichas ➔ timestamps ➔ X-Rolls/B-Rolls ➔ Edit Plans ➔ gestión de assets ➔ exportación por lotes ➔ carpetas ➔ revisión ➔ publicación.
+                    </p>
+                </div>
+
+                <div class="grid-2-equal gap-2 margin-top-20" id="filosofia-tecnica">
+                    <div class="apple-card">
+                        <h3>Filosofía Técnica y Reparto</h3>
+                        <ul class="bullet-list-apple">
+                            <li><strong>ChatGPT Work:</strong> Arquitectura, definición y revisión de tareas.</li>
+                            <li><strong>OpenCode con Gemini API:</strong> Implementación autónoma de código.</li>
+                            <li><strong>Xcode:</strong> Compilación nativa Swift/SwiftUI, debugging y pruebas.</li>
+                        </ul>
+                    </div>
+
+                    <div class="apple-card" id="frase-resumen">
+                        <h3>Resumen Maestro de AbrxOS</h3>
+                        <p class="card-text font-italic">
+                            “AbrxOS es un sistema de producción inteligente que convierte conocimiento de marca, estructuras creativas y material multimedia en decisiones de contenido ejecutables; visualiza cómo producirlas, automatiza lo repetitivo, conserva control humano sobre lo creativo y aprende de lo que realmente funciona.”
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECCIÓN DE ESTADO DE DESARROLLO EN VIVO (PANEL STATUS.JSON INTEGRADO) -->
+        <section class="section-padding dev-panel-section" id="desarrollo">
+            <div class="container">
+                <div class="dev-header">
+                    <div>
+                        <p class="section-eyebrow text-accent">Desarrollo Real · Status en Vivo</p>
+                        <h2 class="section-title text-white">Panel de Seguimiento del Proyecto</h2>
+                    </div>
+                    <div class="dev-meta">
+                        <span id="connection-status" class="badge connecting">Conectando...</span>
+                        <span id="last-query" class="meta-time">Última consulta: --:--:--</span>
+                        <span id="last-state-update" class="meta-time">Actualizado: --:--:--</span>
+                    </div>
+                </div>
+
+                <div id="error-banner" class="error-banner hidden">
+                    ⚠️ Error al actualizar los datos o JSON inválido. Se muestra la última información válida conocida.
+                </div>
+
+                <div class="dashboard-grid">
+                    <!-- FASE Y TAREA ACTIVA -->
+                    <article class="card" id="estado-actual">
+                        <h3>Fase y Tarea Activa</h3>
+                        <p class="label">Fase Actual:</p>
+                        <p id="current-phase" class="value-highlight">Cargando...</p>
+
+                        <p class="label">Objetivo de Fase:</p>
+                        <p id="phase-objective" class="text-silver">Cargando...</p>
+
+                        <p class="label">Tarea Activa:</p>
+                        <div class="task-box">
+                            <span id="active-task-id" class="task-badge">---</span>
+                            <strong id="active-task-title">Cargando...</strong>
+                        </div>
+                        <p id="active-task-status" class="task-status-text">---</p>
+                    </article>
+
+                    <!-- TRABAJO Y SIGUIENTE -->
+                    <article class="card" id="tarea-activa">
+                        <h3>Trabajo en Curso & Próximos Pasos</h3>
+                        <p class="label">Trabajo en Curso:</p>
+                        <ul id="work-in-progress-list" class="bullet-list-apple"><li>Cargando...</li></ul>
+
+                        <p class="label margin-top-10">Próximos Pasos:</p>
+                        <ol id="next-steps-list" class="numbered-list-apple"><li>Cargando...</li></ol>
+
+                        <p class="label margin-top-10">Bloqueos:</p>
+                        <div id="blockers-container"><p class="none-text">Sin bloqueos registrados.</p></div>
+                    </article>
+
+                    <!-- COMPROBACIONES REALES -->
+                    <article class="card" id="comprobaciones">
+                        <h3>Comprobaciones de Código</h3>
+                        <h4>Comprobaciones Automáticas</h4>
+                        <ul id="auto-checks-list" class="check-list-apple"><li>Cargando...</li></ul>
+
+                        <h4 class="margin-top-10">Comprobaciones Manuales</h4>
+                        <ul id="manual-checks-list" class="check-list-apple"><li>Cargando...</li></ul>
+                    </article>
+
+                    <!-- ROADMAP HITOS -->
+                    <article class="card" id="roadmap">
+                        <h3>Hitos del Roadmap</h3>
+                        <div class="table-responsive">
+                            <table class="roadmap-table">
+                                <thead>
+                                    <tr>
+                                        <th>Fase</th>
+                                        <th>Hito</th>
+                                        <th>Estado</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="roadmap-tbody">
+                                    <tr><td colspan="3">Cargando...</td></tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </article>
+
+                    <!-- HISTORIAL EN LÍNEA -->
+                    <article class="card full-width" id="historial">
+                        <h3>Historial de Avances</h3>
+                        <div class="timeline-apple" id="history-timeline">
+                            <p>Cargando...</p>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
     </main>
 
+    <!-- FOOTER ESTILO APPLE -->
     <footer class="site-footer">
-        <p><strong>AbrxOS</strong> — presentación del producto y estado de desarrollo. Sin servicios externos, sin analítica, sin formularios.</p>
-        <p class="nota">Las cifras de contenidos son orientativas. Las capacidades se marcan según evidencia real. La app macOS sigue en repositorio privado.</p>
+        <div class="container">
+            <p><strong>AbrxOS</strong> — Presentación pública del producto y panel de desarrollo local.</p>
+            <p class="footer-note">
+                Toda maqueta visual y timeline se identifican como maquetas conceptuales. Las capacidades se marcan según la evidencia real en el código nativo Swift. La app de macOS permanece en repositorio privado.
+            </p>
+        </div>
     </footer>
+
     <script src="app.js"></script>
 </body>
 </html>

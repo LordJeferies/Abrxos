@@ -1,7 +1,11 @@
-/* AbrxOS web: navegación accesible + panel de desarrollo desde status.json */
-(function initNav() {
+/* ==========================================================================
+   AbrxOS — Interactive Navigation & Live Status Data Refresh
+   ========================================================================== */
+
+(function initAppleNav() {
     const toggle = document.getElementById('menu-toggle');
     const nav = document.getElementById('site-nav');
+    
     if (toggle && nav) {
         toggle.addEventListener('click', () => {
             const open = nav.classList.toggle('open');
@@ -9,32 +13,44 @@
             toggle.setAttribute('aria-label', open ? 'Cerrar menú' : 'Abrir menú');
         });
     }
+
+    // Toggle submenus on click or keyboard
     document.querySelectorAll('.has-submenu > .nav-top').forEach((btn) => {
-        btn.addEventListener('click', () => {
-            const li = btn.parentElement;
-            const isOpen = li.classList.contains('open');
+        btn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            const parent = btn.parentElement;
+            const isOpen = parent.classList.contains('open');
+
+            // Close other submenus
             document.querySelectorAll('.has-submenu.open').forEach((other) => {
-                other.classList.remove('open');
-                const b = other.querySelector('.nav-top');
-                if (b) b.setAttribute('aria-expanded', 'false');
+                if (other !== parent) {
+                    other.classList.remove('open');
+                    const b = other.querySelector('.nav-top');
+                    if (b) b.setAttribute('aria-expanded', 'false');
+                }
             });
+
             if (!isOpen) {
-                li.classList.add('open');
+                parent.classList.add('open');
                 btn.setAttribute('aria-expanded', 'true');
             } else {
+                parent.classList.remove('open');
                 btn.setAttribute('aria-expanded', 'false');
             }
         });
+
         btn.addEventListener('keydown', (ev) => {
             if (ev.key === 'ArrowDown') {
                 ev.preventDefault();
-                const li = btn.parentElement;
-                if (!li.classList.contains('open')) btn.click();
-                const first = li.querySelector('.submenu a');
+                const parent = btn.parentElement;
+                if (!parent.classList.contains('open')) btn.click();
+                const first = parent.querySelector('.submenu a');
                 if (first) first.focus();
             }
         });
     });
+
+    // Close on Escape or click outside
     document.addEventListener('keydown', (ev) => {
         if (ev.key === 'Escape') {
             document.querySelectorAll('.has-submenu.open').forEach((li) => {
@@ -48,6 +64,7 @@
             }
         }
     });
+
     document.addEventListener('click', (ev) => {
         if (!ev.target.closest('.has-submenu')) {
             document.querySelectorAll('.has-submenu.open').forEach((li) => {
@@ -58,6 +75,10 @@
         }
     });
 })();
+
+/* ==========================================================================
+   LIVE STATUS.JSON DATA REFRESH (15s Polling)
+   ========================================================================== */
 
 let lastValidData = null;
 let lastRenderedJsonString = "";
@@ -80,36 +101,61 @@ function showErrorBanner(show) {
     else banner.classList.add('hidden');
 }
 
+function safeSetText(elementId, text) {
+    const el = document.getElementById(elementId);
+    if (el) el.textContent = text || '---';
+}
+
+function renderList(elementId, items, createItemFn) {
+    const el = document.getElementById(elementId);
+    if (!el) return;
+    el.textContent = '';
+    if (!items || items.length === 0) {
+        const li = document.createElement('li');
+        li.textContent = 'Ninguno';
+        el.appendChild(li);
+        return;
+    }
+    items.forEach((item) => el.appendChild(createItemFn(item)));
+}
+
 function renderData(data) {
     const jsonString = JSON.stringify(data);
     const hasChanged = jsonString !== lastRenderedJsonString;
     const now = new Date();
+    
     const lastQuery = document.getElementById('last-query');
     if (lastQuery) lastQuery.textContent = `Última consulta: ${formatTime(now)}`;
+
     if (data.lastUpdate) {
         const updateDate = new Date(data.lastUpdate);
         const el = document.getElementById('last-state-update');
         if (el) {
-            if (!isNaN(updateDate)) el.textContent = `Última actualización de estado: ${formatTime(updateDate)}`;
-            else el.textContent = `Última actualización de estado: ${data.lastUpdate}`;
+            if (!isNaN(updateDate)) el.textContent = `Actualizado: ${formatTime(updateDate)}`;
+            else el.textContent = `Actualizado: ${data.lastUpdate}`;
         }
     }
+
     if (!hasChanged && lastValidData !== null) return;
+    
     lastRenderedJsonString = jsonString;
     lastValidData = data;
 
     safeSetText('current-phase', data.phase);
     safeSetText('phase-objective', data.phaseObjective);
+
     if (data.activeTask) {
         safeSetText('active-task-id', data.activeTask.id);
         safeSetText('active-task-title', data.activeTask.title);
         safeSetText('active-task-status', data.activeTask.status);
     }
+
     renderList('work-in-progress-list', data.workInProgress, (item) => {
         const li = document.createElement('li');
         li.textContent = item;
         return li;
     });
+
     if (data.checks) {
         renderList('auto-checks-list', data.checks.automatic, (check) => {
             const li = document.createElement('li');
@@ -123,6 +169,7 @@ function renderData(data) {
             li.appendChild(spanRes);
             return li;
         });
+
         renderList('manual-checks-list', data.checks.manual, (check) => {
             const li = document.createElement('li');
             const spanDesc = document.createElement('span');
@@ -136,11 +183,13 @@ function renderData(data) {
             return li;
         });
     }
+
     renderList('next-steps-list', data.nextSteps, (step) => {
         const li = document.createElement('li');
         li.textContent = step;
         return li;
     });
+
     const blockersContainer = document.getElementById('blockers-container');
     if (blockersContainer) {
         blockersContainer.textContent = '';
@@ -151,7 +200,7 @@ function renderData(data) {
             blockersContainer.appendChild(p);
         } else {
             const ul = document.createElement('ul');
-            ul.className = 'bullet-list';
+            ul.className = 'bullet-list-apple';
             data.blockers.forEach((blocker) => {
                 const li = document.createElement('li');
                 li.textContent = blocker;
@@ -160,6 +209,7 @@ function renderData(data) {
             blockersContainer.appendChild(ul);
         }
     }
+
     const roadmapTbody = document.getElementById('roadmap-tbody');
     if (roadmapTbody) {
         roadmapTbody.textContent = '';
@@ -179,6 +229,7 @@ function renderData(data) {
             });
         }
     }
+
     const timeline = document.getElementById('history-timeline');
     if (timeline) {
         timeline.textContent = '';
@@ -202,24 +253,6 @@ function renderData(data) {
             });
         }
     }
-}
-
-function safeSetText(elementId, text) {
-    const el = document.getElementById(elementId);
-    if (el) el.textContent = text;
-}
-
-function renderList(elementId, items, createItemFn) {
-    const el = document.getElementById(elementId);
-    if (!el) return;
-    el.textContent = '';
-    if (!items || items.length === 0) {
-        const li = document.createElement('li');
-        li.textContent = 'Ninguno';
-        el.appendChild(li);
-        return;
-    }
-    items.forEach((item) => el.appendChild(createItemFn(item)));
 }
 
 async function fetchStatus() {
