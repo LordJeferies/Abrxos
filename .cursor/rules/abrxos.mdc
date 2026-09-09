@@ -1,0 +1,11 @@
+---
+description: Reglas generales de Abrxos
+alwaysApply: true
+---
+Leer AGENTS.md y Documentation/LEER_PRIMERO.md.
+Swift: nombres de tipos UpperCamelCase, funciones y propiedades lowerCamelCase.
+Organizar por módulo y responsabilidad. Views muestran estado; servicios ejecutan operaciones; modelos representan datos. No crear Managers genéricos sin responsabilidad concreta.
+Usar concurrencia estructurada, cancelación y errores explícitos; mantener trabajo pesado fuera del hilo de interfaz. Aplicar aislamiento MainActor donde corresponda.
+Core no debe importar SDKs de proveedores de IA. La interfaz gráfica y la futura CLI llaman los mismos servicios de aplicación.
+No cambiar módulos ajenos al alcance sin explicar la dependencia que exige el cambio.
+Actualizar documentación del estado con evidencia, no con intención.

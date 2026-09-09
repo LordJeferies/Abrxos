@@ -1,0 +1,15 @@
+# macOS / Xcode
+.DS_Store
+DerivedData/
+build/
+*.xcuserstate
+xcuserdata/
+# Credenciales y datos locales
+.env
+.env.*
+!.env.example
+*.p12
+*.p8
+LocalData/
+LocalSecrets/
+# Mantener Package.resolved para reproducibilidad de la aplicación.
