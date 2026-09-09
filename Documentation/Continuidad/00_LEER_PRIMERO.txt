@@ -1,0 +1,42 @@
+ABRXOS — PAQUETE DE CONTINUIDAD — 2026-09-09
+
+Este paquete conserva las decisiones y evidencias de la conversación. No contiene una copia de tu app ni de los archivos originales actuales del Mac. No cambia tu código Swift.
+
+A. PARA UN PROYECTO DE CHATGPT
+Extrae el ZIP. Adjunta individualmente los seis archivos .md de ChatGPT_Proyecto. No dependas de que ChatGPT descomprima el ZIP. Después pega el contenido de 07_CONTINUAR_EN_WORK.txt en un chat Work dentro del proyecto.
+Cuando generes ABRXOS_REPOSITORIO_ACTUAL_....txt desde el Mac, adjúntalo también: contiene los originales actuales seleccionados y código de texto. Reemplaza exportaciones antiguas para evitar versiones contradictorias. No se sube automáticamente al proyecto de ChatGPT.
+
+B. PARA COPIAR ESTOS DOCUMENTOS A TU ABRXOS
+Conserva esta carpeta completa en Descargas con su nombre Abrxos_Continuidad_2026-09-09.
+Ejecuta en Terminal:
+python3 "$HOME/Downloads/Abrxos_Continuidad_2026-09-09/Herramientas/instalar_continuidad.py" --project "$HOME/Developer/Abrxos"
+
+Requiere python3. Si falta, comparte el mensaje; no hace falta recrear el repositorio.
+El instalador copia documentos y prompts a Documentation/Continuidad, coloca el exportador en Scripts/exportar_contexto_chatgpt.py y añade al final de AGENTS.md una referencia a la continuidad. Conserva su contenido previo. No instala modelos, conecta claves ni crea commits. Si un archivo destino distinto ya existe, se detiene antes de copiar.
+
+C. PARA GENERAR LO QUE DEBES ADJUNTAR DESDE TU MAC
+Tras instalar:
+python3 "$HOME/Developer/Abrxos/Scripts/exportar_contexto_chatgpt.py" --project "$HOME/Developer/Abrxos"
+
+Escribe en una carpeta nueva dentro de Escritorio/Abrxos_Para_ChatGPT. Muestra la ruta final y produce un TXT de contexto y un TXT de inventario. No envía nada a internet ni modifica la app. Incluye documentos y fuentes seleccionadas, no vídeos, builds ni el historial .git. Excluye archivos de credenciales conocidos y omite archivos donde detecta patrones comunes de secretos. La detección no es exhaustiva: revisa antes de adjuntar.
+El TXT de inventario indica omisiones y límites. Adjunta ambos TXT junto con los documentos 01 a 06. Los assets binarios que resulten necesarios se adjuntan después de forma específica.
+
+D. PARA OPENCODE
+Lee 05_OPENCODE_GEMINI_Y_XCODE.md. Abre la raíz de Abrxos y conecta Google AI Studio mediante el campo de API key. Pega 08_INICIO_OPENCODE.txt en el chat de OpenCode para una revisión inicial sin cambios.
+
+E. REVISAR Y GUARDAR EL NUEVO ESTADO LOCAL
+Tras instalar, puedes consultar:
+git -C "$HOME/Developer/Abrxos" diff --stat
+git -C "$HOME/Developer/Abrxos" status --short
+Revisa AGENTS.md y los archivos nuevos antes de registrarlos en Git. El commit 969b084 sigue siendo evidencia histórica, no necesariamente el HEAD actual después de nuevas entregas.
+
+CONTENIDO
+ChatGPT_Proyecto/01: contexto y decisión vigente.
+02: estado y evidencias.
+03: arquitectura y decisiones conservadas.
+04: método de trabajo.
+05: guía de OpenCode, Gemini y límites de Xcode.
+06: próxima tarea funcional propuesta.
+07_CONTINUAR_EN_WORK.txt: texto para pegar en Work.
+08_INICIO_OPENCODE.txt: lectura inicial para pegar en OpenCode.
+Herramientas/: instalador y exportador. Estos scripts no necesitan subirse a ChatGPT para retomar, aunque el exportador los puede incluir como código del repositorio.

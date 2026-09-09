@@ -1,0 +1,10 @@
+Trabaja en la carpeta raíz /Users/lordjef/Developer/Abrxos. Responde en español.
+
+En esta primera intervención no modifiques archivos ni crees commits.
+Lee AGENTS.md, .cursor/rules/abrxos.mdc, Documentation/LEER_PRIMERO.md, CONTEXTO.md, ARQUITECTURA.md, ROADMAP.md, ESTADO_ACTUAL.md, DECISIONES.md y Tasks/TASK_000_BASE.md. Lee también Documentation/Continuidad/ si está instalado, en especial la decisión de usar OpenCode con Gemini AI Studio. No ejecutes /init ni reescribas las instrucciones existentes.
+
+Consulta git status --short y los últimos tres commits. Inspecciona App/Abrxos/Abrxos.xcodeproj y los archivos Swift. Consulta esquemas con xcodebuild -list -project App/Abrxos/Abrxos.xcodeproj si el acceso local lo permite. No leas ni imprimas credenciales ni archivos de autenticación.
+
+Devuelve: ruta real, estado Git, app que existe, reglas que respetarás, esquema encontrado y qué falta para crear una marca y un proyecto con guardado local y recuperación al reabrir. Distingue lo comprobado en código de lo que solo dice la documentación. Si existe avance posterior a 969b084, descríbelo y conserva sus cambios.
+
+La tarea 06_TASK_001_MARCAS_PROYECTOS_PROPUESTA.md es una propuesta; aún no implementes en esta lectura inicial.

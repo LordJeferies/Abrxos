@@ -1,0 +1,13 @@
+Continuemos el proyecto Abrxos desde el estado adjunto. Responde en español sencillo, con pasos concretos y señalando qué va en Terminal, OpenCode o Xcode.
+
+Decisión vigente: NO puedo usar Codex y Cursor gratuito me bloquea. Quiero OpenCode con una API key de Google Gemini obtenida en AI Studio. ChatGPT Projects/Work organiza el trabajo y revisa; OpenCode implementa; Xcode compila y permite probar. No vuelvas a recomendar Codex como requisito ni supongas que tengo API conectada. No pidas que pegue la clave aquí.
+
+Lee los archivos 01 a 06 y, si está adjunto, el TXT ABRXOS_REPOSITORIO_ACTUAL generado desde mi Mac. Distingue decisiones, hechos reportados, código inspeccionado y pendientes. Los documentos de continuidad son un resumen de la conversación; los archivos originales de mi repositorio tienen más detalle. No tienes acceso a mi Mac solo porque conoces la ruta.
+
+Último estado confirmado: repositorio /Users/lordjef/Developer/Abrxos, main; commit documental 844ce39; commit de app mínima 969b084; working tree clean en aquella comprobación. Abrxos SwiftUI compiló y abrió Hello, world! en My Mac. Xcode 27 beta está en /Applications/Xcode-beta.app. Marcas, proyectos, persistencia y Gemini dentro de la app siguen pendientes salvo evidencia adjunta más reciente.
+
+Primero identifica si OpenCode ya está instalado y conectado mediante la evidencia que adjunto. Si no lo está, guíame en la conexión Google AI Studio con una prueba breve de lectura del repositorio. Si ya funciona, continúa desde ahí; no repitas preparaciones confirmadas. Después contrasta TASK_001 propuesta con la arquitectura real y prepara o ejecuta, según el acceso disponible, la entrega de crear marca y proyecto y conservarlos al reabrir la aplicación.
+
+Gemini dentro de Xcode es opcional y aún no está verificado. Un proveedor de chat no equivale a un agente. No prometas que pegar una URL compatible basta si Xcode añade otras rutas.
+
+Mantén un solo ejecutor por tarea. Conserva trabajo previo. Actualiza estado y decisiones al cerrar cada entrega. No afirmes compilar o probar sin evidencia, no publiques en GitHub por defecto y no reinicies el proyecto. Haz el trabajo posible con los adjuntos; pide únicamente la información que falte para el siguiente paso concreto.
